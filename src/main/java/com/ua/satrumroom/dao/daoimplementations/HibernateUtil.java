@@ -1,5 +1,6 @@
 package com.ua.satrumroom.dao.daoimplementations;
 
+import com.ua.satrumroom.domain.Doctor;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -14,6 +15,8 @@ public class HibernateUtil {
         try {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.configurations.xml");
+
+            configuration.addAnnotatedClass(Doctor.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 

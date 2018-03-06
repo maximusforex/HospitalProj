@@ -4,5 +4,5 @@ import com.ua.satrumroom.domain.Doctor;
 
 public interface DoctorDao {
 
-    public void addDoctor(Doctor doctor);
+     void addDoctor(Doctor doctor);
 }
